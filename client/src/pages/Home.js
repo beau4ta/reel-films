@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { Col, Row, Container } from "../components/Grid/Grid";
-import SearchBar from "../components/SearchBar/SearchBar";
-import SearchButton from "../components/SearchButton/Button";
+import { Col, Row, Container } from "../components/Grid/index.js";
+import SearchBar from "../components/SearchFunction/index.js";
+import SearchButton from "../components/SearchBtn/index.js";
 
-import { List, ListItem } from "../components/List/List";
+import { List, ListItem } from "../components/List/index.js";
 import API from "../utils/API";
 import "./css/HomePage.css";
 

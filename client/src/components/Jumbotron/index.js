@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import SearchBar from "../SearchBar/SearchBar.js";
+import SearchBar from "../SearchFunction/index.js";
 import { Container, Jumbotron } from "react-bootstrap";
 import { Row, Col } from ".Grid/index.js";
-import ".Jumbotron/style.css";
-import SearchButton from "../SearchBtn/index.js";
+import "../Jumbotron/style.css";
+import SearchButton from "./SearchBtn/index.js";
 import API from "../../utils/API.js";
 
 function Header() {

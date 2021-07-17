@@ -1,5 +1,5 @@
 import React from "react";
-import "./SearchFunction.css";
+import ".SearchFunction/style.css";
 import { Form, FormControl } from "react-bootstrap";
 
 function SearchBar(props) {
