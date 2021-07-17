@@ -1,12 +1,24 @@
 import React from "react";
+import { Navbar, Button } from "react-bootstrap";
+import "./Nav/style.css";
 
 function Nav() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-      <a className="navbar-brand" href="/">
-        React Reading List
-      </a>
-    </nav>
+    //
+
+    <Navbar className="navbar   main-navigation justify-content-between ">
+      <Navbar.Brand className="logo" href="/">
+        Reel-Films
+      </Navbar.Brand>
+      <Button
+        className="login-btn"
+        variant="outline-primary"
+        href="SignIn"
+        size="sm"
+      >
+        Log In
+      </Button>
+    </Navbar>
   );
 }
 
