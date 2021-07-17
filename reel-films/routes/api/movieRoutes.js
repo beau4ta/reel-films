@@ -8,8 +8,8 @@ router.route("/profile/:username")
 
 //NEED TO ADD SIGNIN FUNCTIONALITY
 
-//Logout Route
 
+//Logout Route
 router.get('/logout', (req, res) => {
     req.logout();
 })
