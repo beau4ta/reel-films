@@ -1,20 +1,21 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
+import Nav from '../src/components/Nav/Nav';
+import Login from '../src/components/Login/Login';
+import Signup from '../src/components/Signup/Signup';
+import Jumbotron from '../src/components/Jumbotron/Jumbotron';
 
 function App() {
   return (
     <Router>
       <div className="App">
+        <Jumbotron />
         <Nav />
         <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path={["/Login", "/api/movies/Login", "/profile/Login"]} component={Login}/>
+          <Route exact path="/" component={Login} />
           <Route exact path="/signup" component={Signup} />
-          <Route exact path="/movies/:id" component={Movies} />
-          <Route component={NoMatch} />
         </Switch>
-        <Footer />
       </div>
     </Router>
   );
