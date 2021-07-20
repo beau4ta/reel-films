@@ -25,14 +25,9 @@
     "express": "^4.16.3",
     "if-env": "^1.0.4",
     "mongoose": "^5.3.16",
-<<<<<<< HEAD:package.json
+    "passport": "^0.4.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-icons": "^4.2.0",
-    "reactstrap": "^8.9.0",
-    "web-vitals": "^2.1.0"
-=======
-    "passport": "^0.4.1"
->>>>>>> 18b956d5bd0a76dbfe8ec0e7753bdc98e1c3ae34:reel-films/package.json
+    "reactstrap": "^8.9.0"
   }
 }
