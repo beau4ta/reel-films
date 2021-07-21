@@ -10,7 +10,7 @@ import Home from '../src/pages/home';
 function App() {
   return (
     <Router>
-      <div className="App">
+      <div className="App image">
         <Jumbotron />
         <Nav />
         <Switch>

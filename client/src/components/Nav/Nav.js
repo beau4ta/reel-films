@@ -7,10 +7,10 @@ const Navbar = (props) => {
     <div>
       <Nav tabs>
         <NavItem>
-          <NavLink href="#" active>Link</NavLink>
+          <NavLink href="#" active>Home</NavLink>
         </NavItem>
         <NavItem>
-          <NavLink href="#">Link</NavLink>
+          <NavLink href="#">Profile</NavLink>
         </NavItem>
         <NavItem>
           <NavLink href="#">Another Link</NavLink>

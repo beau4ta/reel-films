@@ -6,7 +6,7 @@ const Login = (props) => {
   return (
     <div>
       <Form className="login-form">
-          <h2 className="text-center">Welcome</h2>
+          <h2 className="text-center">Welcome back!</h2>
       <FormGroup>
         <Label>Email</Label>
         <Input type="email" placeholder="Email" />
