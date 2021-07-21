@@ -21,13 +21,13 @@ const AllResults = props => {
                         return (
                             <div>
                             <SearchResults
-                             key={movie.data.id}
-                             title={movie.data.title}
-                             director={movie.data.director}
-                             genre={movie.data.genre}
-                             plot={movie.data.plot}
-                             poster={movie.data.poster}
-                             _id={movie._id}
+                             key={movie.imdbID}
+                             title={movie.Title}
+                             year={movie.Year}
+                             director={movie.Director}
+                             genre={movie.Genre}
+                             plot={movie.Plot}
+                             poster={movie.Poster}
                              saveMovie={saveMovie}
                              />
                              </div>

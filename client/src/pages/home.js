@@ -19,7 +19,7 @@ class Home extends Component {
         API.getMovies(this.state.search)
         .then(res => {
             console.log(res)
-            this.setState({ movies: res.data.items })
+            this.setState({ movies: [res.data] })
         })
         .catch(err => console.log(err));
     };
