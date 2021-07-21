@@ -9,7 +9,7 @@ import Jumbotron from '../src/components/Jumbotron/Jumbotron';
 function App() {
   return (
     <Router>
-      <div className="App">
+      <div className="App image">
         <Jumbotron />
         <Nav />
         <Switch>
