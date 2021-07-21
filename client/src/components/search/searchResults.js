@@ -18,7 +18,7 @@ const SearchResults = (props) => {
                     <h4>{props.director}</h4>
                     <h4>{props.year}</h4>
                     <h4>{props.genre}</h4>
-                    <p>{props.synopsis}</p>
+                    <p>{props.plot}</p>
                 </div>
                 <div className='button-container'>
                     <button className='deleteBtn' onClick={() => deleteMovie(props)}><i className="fas fa-minus"></i></button>
@@ -37,7 +37,7 @@ const SearchResults = (props) => {
                 <h2>{props.title}</h2>
                 <h4>{props.director}</h4>
                 <h4>{props.year}</h4>
-                <p>{props.synopsis}</p>
+                <p>{props.plot}</p>
             </div>
             <div className='button-container'>
                 <button className='saveBtn' onClick={() => saveMovie(props)}><i className="fas fa-plus"></i></button>
