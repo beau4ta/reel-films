@@ -1,14 +1,10 @@
 
-import axios from 'axios';
+import axios from "axios";
 
-const BASEURL = 'http://www.omdbapi.com/?apikey='
+const BASEURL = "http://www.omdbapi.com/?apikey=";
 
-const APIKEY = 'b4f70639'
+const APIKEY = "23c335db";
 
-export default {
-    getMovies: function(movie) {
-    return axios.get(BASEURL + APIKEY + '&' + movie )
-},
 createUser: function(user) {
     return axios.post("/api/movies/register", user)
   },
@@ -16,4 +12,5 @@ createUser: function(user) {
     return axios.post("/api/movies/signin", user)
   },
 }
+
 
