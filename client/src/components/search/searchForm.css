@@ -1,0 +1,8 @@
+.search-container{
+    margin: 15px;
+    padding: 15px;
+    background-color: rgb(125, 125, 125);
+    color: black;
+    border: inset;
+    border-radius: 10px;
+}

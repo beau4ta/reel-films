@@ -1,0 +1,7 @@
+.result-container{
+    background-color: rgb(125, 125, 125);
+    color: black;
+    margin: 50px;
+    border: inset;
+    border-radius: 10px;
+}
