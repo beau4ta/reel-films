@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import { Nav, NavItem, NavLink } from 'reactstrap';
 
-const Nav = (props) => {
+const Navbar = (props) => {
 
   return (
     <div>
       <Nav tabs>
         <NavItem>
-          <NavLink href="#" active>Link</NavLink>
+          <NavLink href="#" active>Home</NavLink>
         </NavItem>
         <NavItem>
-          <NavLink href="#">Link</NavLink>
+          <NavLink href="#">Profile</NavLink>
         </NavItem>
         <NavItem>
           <NavLink href="#">Another Link</NavLink>
@@ -21,4 +21,4 @@ const Nav = (props) => {
   );
 }
 
-export default Nav;
+export default Navbar;
