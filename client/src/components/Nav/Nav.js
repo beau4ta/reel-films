@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Nav, NavItem, NavLink } from 'reactstrap';
 
-const Example = (props) => {
+const Nav = (props) => {
 
   return (
     <div>
