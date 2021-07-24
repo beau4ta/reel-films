@@ -6,31 +6,20 @@ const MovieList = (props) => {
     <Table hover>
       <thead>
         <tr>
-          <th>#</th>
-          <th>Title</th>
-          <th>Director</th>
-          <th>Type</th>
+          <th scope="col">#</th>
+          <th scope="col">Title</th>
+          <th scope="col">Director</th>
+          <th scope="col">Genre</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <th scope="row">1</th>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td>{props.title}</td>
+          <td>{props.director}</td>
+          <td>{props.genre}</td>
         </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td></td>
-          <td> </td>
-          <td></td>
-        </tr>
+       
       </tbody>
     </Table>
   );
