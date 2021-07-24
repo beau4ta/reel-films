@@ -1,10 +1,11 @@
 import React, { } from 'react';
+import { Table, Container } from 'reactstrap';
 import SearchForm from '../components/search/searchForm';
 import AllResults from '../components/results/allResults';
 import API from '../utils/API';
 import MovieList from '../components/Table/Table';
 
-function List() {
+function Profile() {
 
     return (
         <Container fluid>
@@ -14,4 +15,4 @@ function List() {
     );
 }
 
-export default List;
+export default Profile;

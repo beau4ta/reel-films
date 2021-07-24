@@ -16,14 +16,26 @@ class Home extends Component {
 
       handleFormSubmit = event => {
         event.preventDefault();
-        API.getMovies(this.state.search)
+        API.getSearchMovies(this.state.search)
         .then(res => {
-            console.log(res)
-            this.setState({ movies: [res.data] })
+            console.log(res.data.Search)
+            this.setState({ movies: [...res.data.Search] })
         })
         .catch(err => console.log(err));
     };
 
+    saveMovie = movie => {
+        API.saveMovie({
+            title: movie.title,
+            director: movie.director,
+            plot: movie.plot,
+            poster: movie.poster,
+            genre: movie.genre,
+            year: movie.year
+        })
+        .then(res => console.log("Movie Saved!", res))
+        .catch(err => console.log(err.response))
+    }
 
     render(){
         return(
@@ -34,7 +46,7 @@ class Home extends Component {
                 />
                 <AllResults 
                 movies={this.state.movies}
-                saveMovies={movie => this.saveMovie(movie)}
+                saveMovie={movie => this.saveMovie(movie)}
                 />
             </div>
         )
