@@ -1,5 +1,5 @@
 import React from 'react';
-import './searchForm.css'
+import './searchForm.css';
 
 const SearchForm = (props) => {
     return(
