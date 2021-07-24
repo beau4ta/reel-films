@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { Nav, NavItem, NavLink } from 'reactstrap';
+import "./Nav.css";
 
 const Navbar = (props) => {
 
   return (
-    <div>
+    <div className="nav">
       <Nav tabs>
         <NavItem>
           <NavLink href="#" active>Home</NavLink>
