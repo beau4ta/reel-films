@@ -10,7 +10,7 @@ const SearchResults = (props) => {
     if(!saveMovie){
         return(
             <div className='movie-container d-flex'>
-                <div className='movie-image'>
+                <div className='movie-image container'>
                     <img src={props.poster} alt={props.title} />
                 </div>
                 <div className='movie-info'>
@@ -30,7 +30,7 @@ const SearchResults = (props) => {
     
     return(
         <div className='movie-container d-flex'>
-            <div className='movie-image'>
+            <div className='movie-image container'>
                 <img src={props.poster} alt={props.title} />
             </div>
             <div className='movie-info'>

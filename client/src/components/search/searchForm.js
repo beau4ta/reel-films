@@ -12,8 +12,7 @@ const SearchForm = (props) => {
             placeholder='Search...'
             value={props.search}
             onChange={props.handleInputChange}
-            />
-            <button className='searchBtn' onClick={props.handleFormSubmit}><i className="fas fa-search"></i></button>
+            /><button className='searchBtn' onClick={props.handleFormSubmit}><i className="fas fa-search"></i></button>
         </div>
         </div>
     )

@@ -1,7 +1,18 @@
-.result-container{
+.result-container {
     background-color: rgb(125, 125, 125);
     color: black;
     margin: 50px;
     border: inset;
     border-radius: 10px;
+    padding: 20px;
+    overflow: scroll;
+}
+
+.movie-image {
+    border-radius: 10px;
+
+}
+
+.movie-info {
+    
 }

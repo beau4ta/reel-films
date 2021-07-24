@@ -7,9 +7,10 @@
   margin-top: 80px;
   height: 100%;
   background-color:
-    rgb(85, 84, 84);
-    border-radius: 5px;
+    rgb(125, 125, 125);
+  border-radius: 10px;
+  border: inset;
+  color: black;
 
 
 }
-
