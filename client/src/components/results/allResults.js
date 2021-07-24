@@ -14,7 +14,7 @@ const AllResults = (props) => {
   ) : (
     <div className="result-container">
       <div className="result-title">
-        <h3>Search Results:</h3>
+
         {props.movies.map((movie) => {
           return (
             <div>
