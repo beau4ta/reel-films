@@ -23,11 +23,11 @@ deleteMovie: function (id) {
 },
 
 createUser: function(user) {
-    return axios.post("/api/movies/register", user)
+    return axios.post("/api/user/signup", user)
   },
 
 signIn: function(user) {
-    return axios.post("/api/movies/signin", user)
+    return axios.post("/api/user/signin", user)
   },
 }
 

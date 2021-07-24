@@ -1,9 +1,12 @@
 const db = require("../models");
+const bcrypt = require('bcrypt');
+const passport = require('passport')
+
 
 module.exports = {
     //search a user and see their watch list
        findByUsername: function(req, res) {
-           db.Movie
+           db.User
            .find({$text: {$search: req.params.username, $caseSensitive: false}})
            .then(dbModel => res.json(dbModel))
            .catch(err => res.status(422).json(err));
@@ -40,6 +43,4 @@ module.exports = {
           .then(dbModel => res.json(dbModel))
           .catch(err => res.status(422).json(err));
       }
-       
-       //DO WE NEED A CONTROLLER FOR ADDING A MOVIE FROM API TO A PROFILE OR IS THAT SOMETHING WE CAN DO IN THE FRONTEND?
 }

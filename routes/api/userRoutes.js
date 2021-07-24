@@ -1,13 +1,13 @@
 const router = require("express").Router();
 const movieController = require("../../controllers/movieController");
 
-const Movie = require("../../models");
-
 router.route("/profile/:username")
     .get(movieController.findByUsername)
 
-//Signin Route
+router.post('/signup')
+    .post(movieController.create);
 
+//Signin Route
 router.post('/signin', function(req, res, next) {
     passport.authenticate('local', function(err, user, info) {
       if (err) { return next(err); }
