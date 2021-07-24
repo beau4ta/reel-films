@@ -21,13 +21,8 @@ router.post('/signin', function(req, res, next) {
     })(req, res, next);
   });
 
-<<<<<<< HEAD
-//Logout Route
-
-=======
 
 //Logout Route
->>>>>>> a47c071bfdf547cabda0fb1c20eaa11c131740d6
 router.get('/logout', (req, res) => {
     req.logout();
 })

@@ -13,30 +13,43 @@ class Home extends Component {
     this.setState({ search: event.target.value });
   };
 
-  handleFormSubmit = (event) => {
-    event.preventDefault();
-    API.getMovies(this.state.search)
-      .then((res) => {
-        console.log(res);
-        this.setState({ movies: [res.data] });
-      })
-      .catch((err) => console.log(err));
-  };
+      handleFormSubmit = event => {
+        event.preventDefault();
+        API.getSearchMovies(this.state.search)
+        .then(res => {
+            console.log(res.data.Search)
+            this.setState({ movies: [...res.data.Search] })
+        })
+        .catch(err => console.log(err));
+    };
 
-  render() {
-    return (
-      <div>
-        <SearchForm
-          handleInputChange={this.handleInputChange}
-          handleFormSubmit={this.handleFormSubmit}
-        />
-        <AllResults
-          movies={this.state.movies}
-          saveMovies={(movie) => this.saveMovie(movie)}
-        />
-      </div>
-    );
-  }
+    saveMovie = movie => {
+        API.saveMovie({
+            title: movie.title,
+            director: movie.director,
+            plot: movie.plot,
+            poster: movie.poster,
+            genre: movie.genre,
+            year: movie.year
+        })
+        .then(res => console.log("Movie Saved!", res))
+        .catch(err => console.log(err.response))
+    }
+
+    render(){
+        return(
+            <div>
+                <SearchForm
+                handleInputChange={this.handleInputChange}
+                handleFormSubmit={this.handleFormSubmit} 
+                />
+                <AllResults 
+                movies={this.state.movies}
+                saveMovie={movie => this.saveMovie(movie)}
+                />
+            </div>
+        )
+    }
 }
 
 export default Home;

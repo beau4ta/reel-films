@@ -6,14 +6,27 @@ const BASEURL = "http://www.omdbapi.com/?apikey=";
 const APIKEY = "23c335db";
 
 export default {
-getMovies: function(search) {
-  return axios.get(BASEURL + APIKEY + '&t=' + search) 
+getSearchMovies: function(search) {
+  return axios.get(BASEURL + APIKEY + '&s=' + search) 
+},
+
+getMovies: function () {
+    return axios.get('/api/movies');
+},
+
+saveMovie: function (savedMovies) {
+  return axios.post('/api/movies/', savedMovies);
+},
+
+deleteMovie: function (id) {
+  return axios.delete('/api/movies/' + id)
 },
 
 createUser: function(user) {
     return axios.post("/api/movies/register", user)
   },
-  signIn: function(user) {
+
+signIn: function(user) {
     return axios.post("/api/movies/signin", user)
   },
 }
