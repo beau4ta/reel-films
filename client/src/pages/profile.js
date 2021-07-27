@@ -1,18 +1,36 @@
-import React, { } from 'react';
-import { Table, Container } from 'reactstrap';
-import SearchForm from '../components/search/searchForm';
+import React, { Component } from 'react';
 import AllResults from '../components/results/allResults';
 import API from '../utils/API';
-import MovieList from '../components/Table/Table';
 
-function Profile() {
+class Profile extends Component {
+    state = {
+        movies: []
+    }
 
-    return (
-        <Container fluid>
-            <h1>Movie List</h1>
-            <Table></Table>
-        </Container>
-    );
+    componentDidMount() {
+        API.getMovies()
+        .then(res => {
+            this.setState({ movies: res.data });
+            console.log(this.state.movies)
+        })
+        .catch(err => console.log(err))
+    }
+
+    deleteMovie = id => {
+        API.deleteMovie(id).then(this.componentDidMount())
+        .catch(err => console.log(err.response))
+    }
+
+    render() {
+        return(
+            <div>
+                <AllResults 
+                movies={this.state.movies}
+                deleteMovie={this.deleteMovie}
+                />
+            </div>
+        )
+    }
 }
 
 export default Profile;
