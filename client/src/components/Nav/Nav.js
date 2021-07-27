@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Nav, NavItem, NavLink } from 'reactstrap';
+import { Link } from 'react-router-dom';
 import "./Nav.css";
 
 const Navbar = (props) => {
@@ -8,15 +9,14 @@ const Navbar = (props) => {
     <div className="nav">
       <Nav tabs>
         <NavItem>
-          <NavLink href="#" active>Home</NavLink>
+          <Link to="/home" className='nav-link'>Home</Link>
         </NavItem>
         <NavItem>
-          <NavLink href="#">Profile</NavLink>
+          <Link to='/profile' className='nav-link'>Profile</Link>
         </NavItem>
         <NavItem>
-          <NavLink href="#">Another Link</NavLink>
+          <Link to='/' className='nav-link'>Log Out</Link>
         </NavItem>
-       
       </Nav>
     </div>
   );
