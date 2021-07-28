@@ -1,5 +1,6 @@
 import React from "react";
 import SearchResults from "../search/searchResults";
+import SavedResults from './savedResults';
 
 const AllResults = (props) => {
   const { saveMovie } = props;
@@ -8,7 +9,18 @@ const AllResults = (props) => {
   return !props.movies ? (
     <div className="result-container">
       <div className="result-title">
-        <h3>Search Results:</h3>
+            <div>
+              <SearchResults
+                key={props._id}
+                title={props.title}
+                year={props.year}
+                director={props.director}
+                genre={props.genre}
+                plot={props.plot}
+                poster={props.poster}
+                deleteMovie={props.deleteMovie}
+              />
+            </div>
       </div>
     </div>
   ) : (
@@ -31,6 +43,7 @@ const AllResults = (props) => {
             </div>
           );
         })}
+          
       </div>
     </div>
   );

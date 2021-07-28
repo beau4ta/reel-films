@@ -6,7 +6,7 @@ const SavedResult = props => {
     const { deleteMovie } = props;
     console.log(props)
     
-    return (props.movies.length === 0) ? (
+    return (!props.movies) ? (
 
             <div className="result-container">
                 <div className="result-title">
@@ -22,9 +22,8 @@ const SavedResult = props => {
                             return (
                                 <div>
                             <AllResults
-                             key={movie.id}
-                             title={movie.movies.movies[0].title}
-                             director={movie.movies[0].director}
+                             title={movie.title}
+                             director={movie.director}
                              plot={movie.plot}
                              year={movie.year}
                              poster={movie.poster}

@@ -35,9 +35,9 @@ const SearchResults = (props) => {
             <div className='movie-info'>
                 <h2>{props.title}</h2>
                 <h4>{props.year}</h4>
-                {/* <h4>{props.director}</h4>
+                <h4>{props.director}</h4>
                 <h4>{props.plot}</h4>
-                <h4>{props.genre}</h4> */}
+                <h4>{props.genre}</h4>
                 <div className='button-container'>
             <button className='saveBtn' onClick={() => saveMovie(props)}><i className="fas fa-plus"></i></button>
             </div>

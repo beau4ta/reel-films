@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import AllResults from '../components/results/allResults';
+import SavedResults from '../components/results/savedResults';
 import API from '../utils/API';
 
 class Profile extends Component {
@@ -24,7 +24,7 @@ class Profile extends Component {
     render() {
         return(
             <div>
-                <AllResults 
+                <SavedResults
                 movies={this.state.movies}
                 deleteMovie={this.deleteMovie}
                 />
