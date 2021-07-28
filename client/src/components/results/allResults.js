@@ -1,6 +1,7 @@
 import React from "react";
 import SearchResults from "../search/searchResults";
 import SavedResults from './savedResults';
+import './savedResults.css';
 
 const AllResults = (props) => {
   const { saveMovie } = props;
