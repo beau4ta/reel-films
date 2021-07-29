@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Button, Form, FormGroup, Label, Input } from "reactstrap";
 import './login.css'
 import API from '../../utils/API';
+import { Link } from 'react-router-dom';
 
 const Login = (props) => {
 
@@ -14,6 +15,7 @@ const Login = (props) => {
       password: password
     })
     .then(res => {console.log(res)})
+    window.location.replace("/home")
     .catch(err => console.log(err))
   }
 
@@ -40,7 +42,7 @@ const Login = (props) => {
       className="btn-lg btn-block btn-dark"
       onClick={handleLogin}
       >Login</Button>
-      <a href='/signup' className='sign-up'>Don't have an account? Sign up.</a>
+      <Link to='/signup' className='sign-up'>Don't have an account? Sign up.</Link>
       </div>
         </Form>
         </div>
