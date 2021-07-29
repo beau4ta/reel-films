@@ -1,0 +1,25 @@
+.result-container {
+    color: black;
+    background-repeat: no-repeat;
+    margin: auto;
+    margin-left: 130px;
+    margin-right: 100px;
+    padding: 50px;
+    overflow: auto;
+}
+
+.result-title {
+    color: black;
+
+}
+
+h3 {
+
+        margin: auto;
+        padding: 15px;
+        background-color: rgb(125, 125, 125);
+        color: black;
+        border: inset;
+        border-radius: 10px;
+        max-width: 400px;
+}
