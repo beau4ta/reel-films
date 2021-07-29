@@ -1,0 +1,31 @@
+.search-container {
+    margin: 30px;
+    padding: 15px;
+    background-color: rgb(125, 125, 125);
+    color: black;
+    border: inset;
+    border-radius: 10px;
+    max-width: 500px;
+}
+
+.search-bar {
+    width: 400px;
+}
+
+.searchBtn {
+    float: left;
+    width: 10%;
+    padding: 10px;
+    background: #0d0d0e;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    border-radius: 10px;
+    /* Prevent double borders */
+    cursor: pointer;
+}
+
+.search-bar {
+    border-radius: 10px;
+}

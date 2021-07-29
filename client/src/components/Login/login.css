@@ -1,13 +1,16 @@
-.login-form, .signup-form {
-    width: 100%;
-    max-width: 330px;
-    padding: 15px;
-    margin: auto;
-    height: 100%;
-  }
-  
-  
-  
-  
-  
-  
+.login-form,
+.signup-form {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+  margin-top: 80px;
+  height: 100%;
+  background-color:
+    rgb(125, 125, 125);
+  border-radius: 10px;
+  border: inset;
+  color: black;
+
+
+}

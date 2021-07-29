@@ -1,0 +1,33 @@
+.result-container {
+    color: black;
+    background-repeat: no-repeat;
+    margin: auto;
+    margin-left: 130px;
+    margin-right: 100px;
+    padding: 120px;
+    overflow: auto;
+}
+
+
+.movie-image {
+    background-color: grey;
+    box-shadow: 5px 0px 5px black;
+    border-radius: 10px;
+    border: 1px solid;
+    border-color: white;
+    align-content: left;
+    padding: 20px;
+    margin: 20px;
+    max-width: 100%;
+}
+
+.movie-info {
+    background-color: grey;
+    text-align: center;
+    padding: 50px;
+    margin: 100px;
+    box-shadow: 5px 0px 5px black;
+    border-radius: 10px;
+    border: 1px solid;
+    border-color: white;
+}

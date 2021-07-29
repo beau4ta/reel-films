@@ -1,25 +1,34 @@
-<<<<<<< HEAD
+
 import axios from "axios";
 
 const BASEURL = "http://www.omdbapi.com/?apikey=";
 
-const APIKEY = "b4f70639";
+const APIKEY = "23c335db";
 
 export default {
-  getMovies: function (movie) {
-    return axios.get(BASEURL + APIKEY + "&" + movie);
+getSearchMovies: function(search) {
+  return axios.get(BASEURL + APIKEY + '&s=' + search) 
+},
+
+getMovies: function () {
+    return axios.get('/api/movies');
+},
+
+saveMovie: function (savedMovies) {
+  return axios.post('/api/movies/', savedMovies);
+},
+
+deleteMovie: function (id) {
+  return axios.delete('/api/movies/' + id)
+},
+
+createUser: function(user) {
+    return axios.post("/api/user/signup", user)
   },
-};
-=======
-import axios from 'axios';
 
-const BASEURL = 'http://www.omdbapi.com/?apikey='
-
-const APIKEY = 'b4f70639'
-
-export default {
-    getMovies: function(movie) {
-    return axios.get(BASEURL + APIKEY + '&' + movie )
+signIn: function(user) {
+    return axios.post("/api/user/signin", user)
+  },
 }
-}
->>>>>>> a47c071bfdf547cabda0fb1c20eaa11c131740d6
+
+

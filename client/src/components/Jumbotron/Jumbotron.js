@@ -1,14 +1,17 @@
-import React from 'react';
-import { Jumbotron, Container } from 'reactstrap';
+import React from "react";
+import { Jumbotron, Container } from "reactstrap";
+import "./Jumbotron.css";
 
 const Header = (props) => {
   return (
-    <div>
+    <div className="jumbotron">
       <Jumbotron fluid>
         <Container fluid>
-          <p className="lead">Organize, Rate, Share</p>
-          <h1 className="display-3">Reel Films</h1>
-          <p className="lead">Plan Your Movie Night!</p>
+          <p className="lead"></p>
+          <h1 className="display-3">
+            <i className="fas fa-film"></i> Reel Films
+          </h1>
+          <p className="lead"></p>
         </Container>
       </Jumbotron>
     </div>

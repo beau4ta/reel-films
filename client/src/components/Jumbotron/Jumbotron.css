@@ -1,0 +1,13 @@
+.jumbotron {
+    height: 100px;
+    color: white;
+    background-color: #850707;
+    display: flex;
+    align-items: left;
+    align-content: left;
+    text-align: left;
+    text-shadow: 3px 3px black;
+    flex-direction: column;
+    justify-content: left;
+
+}

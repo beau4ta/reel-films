@@ -1,17 +1,20 @@
 .App {
   text-align: center;
+  color: white;
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.image {
+  background: url(https://images.unsplash.com/photo-1556684996-c32e7604965a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  min-height: 1000px;
+  background-position: center;
+  background-attachment: fixed;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+
 
 .App-header {
   background-color: #282c34;
