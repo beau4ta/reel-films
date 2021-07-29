@@ -1,9 +1,9 @@
 import React from "react";
 import SearchResults from "../search/searchResults";
-import SavedResults from './savedResults';
 
 const AllResults = (props) => {
   const { saveMovie } = props;
+  const { deleteMovie } = props;
   console.log(props);
 
   return !props.movies ? (
@@ -18,7 +18,7 @@ const AllResults = (props) => {
                 genre={props.genre}
                 plot={props.plot}
                 poster={props.poster}
-                deleteMovie={props.deleteMovie}
+                deleteMovie={deleteMovie}
               />
             </div>
       </div>

@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Button, Form, FormGroup, Label, Input } from "reactstrap";
 import "../Login/login.css";
 import API from '../../utils/API';
+import { Link } from 'react-router-dom';
+
 
 const Signup = (props) => {
   const [username, setUsername] = useState("")
@@ -13,7 +15,10 @@ const Signup = (props) => {
       username: username,
       password: password
     })
-    .then(res => {console.log(res)})
+    .then(res => {
+      console.log(res)
+      //window.location.href("/home")
+    })
     .catch(err => console.log(err))
   }
 
@@ -21,7 +26,7 @@ const Signup = (props) => {
   return (
     <div>
       <Form className="signup-form">
-        <h2 className="text-center">Signup</h2>
+        <h2 className="text-center">Sign Up</h2>
         <FormGroup>
           <Label>Username</Label>
           <Input 
@@ -41,9 +46,9 @@ const Signup = (props) => {
           className="btn-lg btn-block btn-dark"
           onClick={handleSignUp}
           >Sign up</Button>
-          <a href="/" className="log-in">
+          <Link to="/" className="log-in">
             Have an account already? Log in.
-          </a>
+          </Link>
         </div>
       </Form>
     </div>
