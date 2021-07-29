@@ -1,7 +1,7 @@
 import React from  'react'
 import AllResults from './allResults';
 import './savedResults.css'
-
+import moment from 'moment';
 const SavedResult = props => {
     const { deleteMovie } = props;
     console.log(props)
@@ -25,7 +25,7 @@ const SavedResult = props => {
                              title={movie.title}
                              director={movie.director}
                              plot={movie.plot}
-                             year={movie.year}
+                             year={moment(movie.year).format('YYYY')}
                              poster={movie.poster}
                              genre={movie.genre}
                              _id={movie._id}
