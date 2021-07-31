@@ -1,11 +1,11 @@
 .search-container {
-    margin: 30px;
-    padding: 15px;
+    margin: 70px;
+    padding: 20px;
     background-color: rgb(125, 125, 125);
     color: black;
     border: inset;
     border-radius: 10px;
-    max-width: 500px;
+    max-width: 600px;
 }
 
 .search-bar {
