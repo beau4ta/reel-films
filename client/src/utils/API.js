@@ -15,7 +15,7 @@ getMovies: function () {
 },
 
 saveMovie: function (savedMovies) {
-  return axios.post('/api/movies/', savedMovies);
+  return axios.post('/api/movies', savedMovies);
 },
 
 deleteMovie: function (id) {
