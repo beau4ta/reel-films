@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Nav, NavItem, NavLink } from 'reactstrap';
+import React from 'react';
+import { Nav, NavItem } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import "./Nav.css";
 

@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './searchResults.css'
+import Modal from '../modal/modal';
 
 const SearchResults = (props) => {
     const { saveMovie } = props;
     const { deleteMovie } = props;
+    const [show, setShow] = useState(false);
 
     console.log(props);
 
@@ -21,6 +23,8 @@ const SearchResults = (props) => {
                     <h4>{props.genre}</h4>
                     <div className='button-container'>
                 <button className='deleteBtn' onClick={() => deleteMovie(props)}><i className="fas fa-minus"></i></button>    
+                <button className='modal-button' onClick={() => setShow(true)}><i className="fas fa-eye"></i></button>
+                <Modal show={show} />    
                 </div>
                 </div>
             </div>
@@ -40,6 +44,8 @@ const SearchResults = (props) => {
                 <h4>{props.genre}</h4>
                 <div className='button-container'>
             <button className='saveBtn' onClick={() => saveMovie(props)}><i className="fas fa-plus"></i></button>
+            <button className='modal-button' onClick={() => setShow(true)}><i className="fas fa-eye"></i></button>
+            <Modal show={show} /> 
             </div>
             </div>
         </div>
