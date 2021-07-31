@@ -16,8 +16,7 @@ router.route("/profile/:username")
         return res.json(user._id);
       });
     })
-  }
-    );
+  });
 
 
 //Signin Route
