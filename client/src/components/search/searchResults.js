@@ -22,7 +22,7 @@ const SearchResults = (props) => {
                     <h4>{props.plot}</h4>
                     <h4>{props.genre}</h4>
                     <div className='button-container'>
-                <button className='deleteBtn' onClick={() => deleteMovie(props)}><i className="fas fa-minus"></i></button>    
+                <button className='deleteBtn' onClick={() => deleteMovie(props._id)}><i className="fas fa-minus"></i></button>    
                 <button className='modal-button' onClick={() => setShow(true)}><i className="fas fa-eye"></i></button>
                 <Modal show={show} />    
                 </div>
