@@ -17,7 +17,10 @@ class Profile extends Component {
     }
 
     deleteMovie = id => {
-        API.deleteMovie(id).then(this.componentDidMount())
+        console.log('delete test')
+        console.log(id)
+        API.deleteMovie(id)
+        .then(this.componentDidMount())
         .catch(err => console.log(err.response))
     }
 

@@ -17,7 +17,7 @@ const Signup = (props) => {
     })
     .then(res => {
       console.log(res)
-      //window.location.href("/home")
+      window.location.replace("/home")
     })
     .catch(err => console.log(err))
   }
