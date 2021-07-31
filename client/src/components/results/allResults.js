@@ -18,6 +18,7 @@ const AllResults = (props) => {
                 genre={props.genre}
                 plot={props.plot}
                 poster={props.poster}
+                _id={props._id}
                 deleteMovie={deleteMovie}
               />
             </div>
@@ -38,6 +39,7 @@ const AllResults = (props) => {
                 genre={movie.Genre}
                 plot={movie.Plot}
                 poster={movie.Poster}
+                _id={props._id}
                 saveMovie={saveMovie}
               />
             </div>
