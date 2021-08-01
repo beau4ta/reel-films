@@ -32,7 +32,7 @@ class Home extends Component {
             genre: movie.genre,
             year: movie.year
         })
-        .then(res => console.log("Movie Saved!", res))
+        .then(res => console.log("Movie Saved!", res), alert('Movie Saved!'))
         .catch(err => console.log(err.response))
     }
 
