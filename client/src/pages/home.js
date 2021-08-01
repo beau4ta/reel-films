@@ -23,18 +23,18 @@ class Home extends Component {
       .catch((err) => console.log(err));
   };
 
-  saveMovie = (movie) => {
-    API.saveMovie({
-      title: movie.title,
-      director: movie.director,
-      plot: movie.plot,
-      poster: movie.poster,
-      genre: movie.genre,
-      year: movie.year,
-    })
-      .then((res) => console.log("Movie Saved!", res))
-      .catch((err) => console.log(err.response));
-  };
+    saveMovie = movie => {
+        API.saveMovie({
+            title: movie.title,
+            director: movie.director,
+            plot: movie.plot,
+            poster: movie.poster,
+            genre: movie.genre,
+            year: movie.year
+        })
+        .then(res => console.log("Movie Saved!", res), alert('Movie Saved!'))
+        .catch(err => console.log(err.response))
+    }
 
   render() {
     return (
