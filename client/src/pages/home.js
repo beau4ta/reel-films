@@ -13,15 +13,15 @@ class Home extends Component {
     this.setState({ search: event.target.value });
   };
 
-      handleFormSubmit = event => {
-        event.preventDefault();
-        API.getSearchMovies(this.state.search)
-        .then(res => {
-            console.log(res.data.Search)
-            this.setState({ movies: [...res.data.Search] })
-        })
-        .catch(err => console.log(err));
-    };
+  handleFormSubmit = (event) => {
+    event.preventDefault();
+    API.getSearchMovies(this.state.search)
+      .then((res) => {
+        console.log(res.data.Search);
+        this.setState({ movies: [...res.data.Search] });
+      })
+      .catch((err) => console.log(err));
+  };
 
     saveMovie = movie => {
         API.saveMovie({
@@ -36,20 +36,20 @@ class Home extends Component {
         .catch(err => console.log(err.response))
     }
 
-    render(){
-        return(
-            <div>
-                <SearchForm
-                handleInputChange={this.handleInputChange}
-                handleFormSubmit={this.handleFormSubmit} 
-                />
-                <AllResults 
-                movies={this.state.movies}
-                saveMovie={movie => this.saveMovie(movie)}
-                />
-            </div>
-        )
-    }
+  render() {
+    return (
+      <div>
+        <SearchForm
+          handleInputChange={this.handleInputChange}
+          handleFormSubmit={this.handleFormSubmit}
+        />
+        <AllResults
+          movies={this.state.movies}
+          saveMovie={(movie) => this.saveMovie(movie)}
+        />
+      </div>
+    );
+  }
 }
 
 export default Home;

@@ -15,11 +15,11 @@
 
 h3 {
 
-        margin: auto;
-        padding: 15px;
-        background-color: rgb(125, 125, 125);
-        color: black;
-        border: inset;
-        border-radius: 10px;
-        max-width: 400px;
+    margin: auto;
+    padding: 15px;
+    background-color: rgb(125, 125, 125);
+    color: black;
+    border: inset;
+    border-radius: 10px;
+    max-width: 400px;
 }
