@@ -7,9 +7,9 @@ const AllResults = (props) => {
   console.log(props);
 
   return !props.movies ? (
-    <div className="result-container">
+    <div className="result-container-2 container-fluid d-flex">
       <div className="result-title">
-            <div>
+            <div className='d-flex justify-content-center'>
               <SearchResults
                 key={props._id}
                 title={props.title}
@@ -25,7 +25,7 @@ const AllResults = (props) => {
       </div>
     </div>
   ) : (
-    <div className="result-container">
+    <div className="result-container-2 container-fluid d-flex justify-content-center">
       <div className="result-title">
 
         {props.movies.map((movie) => {
