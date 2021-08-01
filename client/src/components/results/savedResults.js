@@ -1,7 +1,7 @@
-import React from  'react';
-import AllResults from './allResults';
-import './savedResults.css';
-import moment from 'moment';
+import React from "react";
+import AllResults from "./allResults";
+import "./savedResults.css";
+import moment from "moment";
 
 const SavedResult = props => {
     const { deleteMovie } = props;
