@@ -19,7 +19,7 @@ const SearchResults = (props) => {
     border-radius: 4px;
     border: none;
     background: #850707;
-    color: #fff;
+    color: black;
     font-size: 24px;
     cursor: pointer;
     `;
@@ -28,12 +28,12 @@ const SearchResults = (props) => {
 
     if (!saveMovie) {
         return (
-            <div>
-                <div className='movie-container d-flex'>
-                    <div className='movie-image container'>
+            <div className='d-flex justify-content-center container-fluid'>
+                <div className='movie-container d-flex justify-content-center container-fluid'>
+                    <div className='movie-image d-flex justify-content-center'>
                         <img src={props.poster} alt={props.title} />
                     </div>
-                    <div className='container-fluid movie-info'>
+                    <div className='movie-info'>
                         <h2>{props.title}</h2>
                         <h4>{props.year}</h4>
                         <h4>{props.director}</h4>
@@ -52,9 +52,9 @@ const SearchResults = (props) => {
     } else {
 
         return (
-            <div>
-                <div className='movie-container d-flex'>
-                    <div className='movie-image container'>
+            <div className='d-flex justify-content-center container-fluid'>
+                <div className='movie-container d-flex justify-content-center container-fluid'>
+                    <div className='movie-image'>
                         <img src={props.poster} alt={props.title} />
                     </div>
                     <div className='movie-info'>

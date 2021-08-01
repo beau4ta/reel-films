@@ -3,9 +3,8 @@
     background-repeat: no-repeat;
     margin: auto;
     margin-left: 130px;
-    margin-right: 100px;
+    margin-right: 130px;
     padding: 120px;
-    overflow: auto;
 }
 
 
@@ -15,10 +14,12 @@
     border-radius: 10px;
     border: 1px solid;
     border-color: white;
-    align-content: left;
-    padding: 20px;
+    padding: 10px;
     margin: 20px;
-    max-width: 100%;
+}
+
+.movie-poster{
+    display: flex;
 }
 
 .movie-info {

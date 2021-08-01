@@ -7,18 +7,21 @@ const SavedResult = props => {
     const { deleteMovie } = props;
     console.log(props)
     return (!props.movies) ? (
+        <div className='d-flex justify-content-between align-items-center'>
             <div className="result-container">
                 <div className="result-title">
-                    <h3>Movies that You Saved</h3>
+                    <h3 className='saved-title'>Movies that You Saved</h3>
                 </div>
             </div>
+            </div>
     ) : (
-                <div className="result-container">
+        <div className='d-flex justify-content-center container-fluid align-items-center'>
+                <div className="result-container container-fluid d-flex justify-content-center">
                     <div className="result-title">
-                        <h3>Movies that You Saved</h3>
+                        <h3 className='saved-title'>Movies that You Saved</h3>
                         {props.movies.map(movie => {
                             return (
-                                <div>
+                                <div className='info-container'>
                             <AllResults
                              title={movie.title}
                              director={movie.director}
@@ -34,6 +37,8 @@ const SavedResult = props => {
                         })}
                     </div>
                 </div>
+            </div>
+                
         )
 }
 export default SavedResult

@@ -26,7 +26,7 @@ class Profile extends Component {
 
     render() {
         return(
-            <div>
+            <div className='d-flex justify-content-center align-items-center container-fluid'>
                 <SavedResults
                 movies={this.state.movies}
                 deleteMovie={this.deleteMovie}
