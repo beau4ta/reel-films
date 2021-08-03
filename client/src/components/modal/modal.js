@@ -61,7 +61,7 @@ export const Modal = ({ showModal, setShowModal }) => {
             <Background>
                 <ModalWrapper showModal={showModal}>
                     <ModalContent>
-                    <h1>THIS IS A TEST</h1>
+                    
                     </ModalContent>
                     <CloseModalButton aria-label='Close modal' onClick={() => setShowModal
                     (prev => !prev)} />

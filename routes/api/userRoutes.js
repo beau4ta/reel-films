@@ -32,10 +32,21 @@ router.post('/signin', function(req, res, next) {
       });
     })(req, res, next);
   });
+router.get('/check', function(req, res) {
+  console.log(req.user)
+  if(req.user) {
+    res.json(true);
+  }
+  else {
+    res.json(false)
+  }
+})
+
 
 //Logout Route
 router.get('/logout', (req, res) => {
     req.logout();
+    res.json("logged out")
 })
 
 module.exports = router

@@ -14,15 +14,9 @@ export default {
     return axios.get('/api/movies');
   },
 
-<<<<<<< HEAD
 saveMovie: function (savedMovies) {
   return axios.post('/api/movies', savedMovies);
 },
-=======
-  saveMovie: function (savedMovies) {
-    return axios.post('/api/movies/', savedMovies);
-  },
->>>>>>> bbec6e14804b7a176f9c6169ee27546ffc712201
 
   deleteMovie: function (id) {
     return axios.delete('/api/movies/' + id);
@@ -35,6 +29,10 @@ saveMovie: function (savedMovies) {
   signIn: function (user) {
     return axios.post("/api/user/signin", user);
   },
+
+  checkLoggedIn: function () {
+    return axios.get('/api/user/check');
+  }
 };
 
 
