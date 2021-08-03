@@ -5,25 +5,27 @@ const routes = require("./routes");
 const passport = require('passport')
 const session = require('express-session');
 require('./config/passport')(passport);
+const User = require("./models/user")
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(session({  secret: 'secret',  resave: true,  saveUninitialized: true}));
 app.use(passport.initialize());
 app.use(passport.session());
-app.use(session({  secret: 'secret',  resave: true,  saveUninitialized: true}));
+
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
 passport.serializeUser(function(user, done) {
-  done(null, user.id);
+  done(null, user._id);
 });
 
-passport.deserializeUser(function(id, done) {
-  User.findById(id, function(err, user) {
+passport.deserializeUser(function(_id, done) {
+  User.findById(_id, function(err, user) {
     done(err, user);
   });
 });

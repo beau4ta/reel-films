@@ -14,8 +14,10 @@ const Login = (props) => {
       username: username,
       password: password
     })
-    .then(res => {console.log(res)})
-    window.location.replace("/home")
+    .then(res => {
+      console.log(res)
+      window.location.replace("/home")
+    })
     .catch(err => console.log(err))
   }
 
