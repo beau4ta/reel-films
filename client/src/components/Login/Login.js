@@ -39,7 +39,8 @@ const Login = (props) => {
         placeholder="Password"
         onChange={(e) => setPassword(e.target.value)} />
       </FormGroup>
-      <div className='button-div d-flex flex-column'>
+        <div className='button-div d-flex flex-column'>
+          <br></br>
       <Button 
       className="btn-lg btn-block btn-dark"
       onClick={handleLogin}

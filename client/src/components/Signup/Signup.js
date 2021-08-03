@@ -42,6 +42,7 @@ const Signup = (props) => {
           onChange={(e) => setPassword(e.target.value)}/>
         </FormGroup>
         <div className="button-div d-flex flex-column">
+          <br></br>
           <Button 
           className="btn-lg btn-block btn-dark"
           onClick={handleSignUp}
