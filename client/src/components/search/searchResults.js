@@ -3,6 +3,7 @@ import './searchResults.css'
 import styled from 'styled-components'
 import { Modal } from '../modal/modal';
 import { ModalStyle } from '../modal/modalStyle';
+import API from '../../utils/API';
 
 const SearchResults = (props) => {
     const { saveMovie } = props;
@@ -12,6 +13,7 @@ const SearchResults = (props) => {
     const openModal = () => {
         setShowModal(prev => !prev)
     }
+
 
     const Button = styled.button`
     padding: 5px;
@@ -45,7 +47,7 @@ const SearchResults = (props) => {
                         </div>
                     </div>
                 </div>
-                <Modal showModal={showModal} setShowModal={setShowModal} />
+                <Modal searchMovie={props.title} showModal={showModal} setShowModal={setShowModal} />
                 <ModalStyle />
             </div>
         )
@@ -65,12 +67,9 @@ const SearchResults = (props) => {
                         <h4>{props.genre}</h4>
                         <div className='button-container'>
                             <Button className='saveBtn' onClick={() => saveMovie(props)}><i className="fas fa-plus"></i></Button>
-                            <Button onClick={openModal}><i className="fas fa-eye"></i></Button>
                         </div>
                     </div>
                 </div>
-                <Modal showModal={showModal} setShowModal={setShowModal} />
-                <ModalStyle />
             </div>
         )
     }

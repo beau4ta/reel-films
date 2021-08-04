@@ -10,6 +10,10 @@ export default {
     return axios.get(BASEURL + APIKEY + '&s=' + search);
   },
 
+  getMovieInfo: function (search) {
+    return axios.get(BASEURL + APIKEY + '&t=' + search);
+  },
+
   getMovies: function () {
     return axios.get('/api/movies');
   },

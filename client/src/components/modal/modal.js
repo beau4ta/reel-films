@@ -1,15 +1,15 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { MdClose } from "react-icons/md";
+import API from '../../utils/API';
 
 
 const ModalWrapper = styled.div`
-  width: 1200px;
-  height: 500px;
+  width: 500px;
+  height: 800px;
   background: #850707;
   color: #000;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   position: absolute;
   z-index: 10;
   border-radius: 10px;
@@ -48,13 +48,36 @@ const CloseModalButton = styled(MdClose)`
   color: white;
 `;
 
-export const Modal = ({ showModal, setShowModal }) => {
+
+
+
+export const Modal = ({searchMovie, showModal, setShowModal}) => {
+
+  const [movies, setMovies] = useState();
+
+  useEffect (() => {
+    API.getMovieInfo(searchMovie)
+    .then(res => {
+      console.log(res.data)
+      setMovies(res.data)
+    })
+    .catch((err) => console.log(err))
+  }, [])
+
   return (
-    <>
+    <div>
       {showModal ? (
           <ModalWrapper showModal={showModal}>
             <ModalContent>
-
+              {movies.Title}, {movies.Year}
+              <br/>
+              Director: {movies.Director}
+              <br/>
+              Genre: {movies.Genre}
+              <br/>
+              <img src={movies.Poster}/>
+              <br/>
+              Plot: {movies.Plot}
             </ModalContent>
             <CloseModalButton
               aria-label="Close modal"
@@ -62,6 +85,6 @@ export const Modal = ({ showModal, setShowModal }) => {
             />
           </ModalWrapper>
       ) : null}
-    </>
+    </div>
   );
 };
