@@ -44,9 +44,19 @@ router.get('/check', function(req, res) {
 
 
 //Logout Route
-router.get('/logout', (req, res) => {
-    req.logout();
-    res.json("logged out")
+router.get('/', (req, res) => {
+    // Express middleware function for logging out a user. The action is successful
+// if the user is no longer authenticated.
+var logout = function (req, res, next) {
+  // Get rid of the session token. Then call `logout`; it does no harm.
+  req.logout();
+  req.session.destroy(function (err) {
+    if (err) { return next(err); }
+    // The response should indicate that the user is no longer authenticated.
+    return res.send({ authenticated: req.isAuthenticated() });
+  });
+};
+    
 })
 
 module.exports = router
