@@ -1,27 +1,21 @@
-import React from 'react'
-import styled from 'styled-components';
-import { MdClose } from 'react-icons/md'
+import React from "react";
+import styled from "styled-components";
+import { MdClose } from "react-icons/md";
 
-const Background = styled.div`
-width: 100%;
-height: 100%;
-background: rgba(0, 0, 0, 0.8);
-display: flex;
-justify-content: center;
-align-items: center;
-`;
 
 const ModalWrapper = styled.div`
-  width: 800px;
+  width: 1200px;
   height: 500px;
-  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
   background: #850707;
   color: #000;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  position: relative;
+  position: absolute;
   z-index: 10;
   border-radius: 10px;
+  border: inset;
+  opacity: 90%;
+  margin-left: 50px;
 `;
 
 const ModalContent = styled.div`
@@ -51,24 +45,23 @@ const CloseModalButton = styled(MdClose)`
   height: 32px;
   padding: 0;
   z-index: 10;
+  color: white;
 `;
 
 export const Modal = ({ showModal, setShowModal }) => {
+  return (
+    <>
+      {showModal ? (
+          <ModalWrapper showModal={showModal}>
+            <ModalContent>
 
-    return (
-        <>
-        {showModal ? (
-            <Background>
-                <ModalWrapper showModal={showModal}>
-                    <ModalContent>
-                    
-                    </ModalContent>
-                    <CloseModalButton aria-label='Close modal' onClick={() => setShowModal
-                    (prev => !prev)} />
-                </ModalWrapper>
-            </Background>
-        ) : null}
-
-        </>
-    )
-}
+            </ModalContent>
+            <CloseModalButton
+              aria-label="Close modal"
+              onClick={() => setShowModal((prev) => !prev)}
+            />
+          </ModalWrapper>
+      ) : null}
+    </>
+  );
+};

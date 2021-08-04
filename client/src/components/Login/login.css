@@ -2,7 +2,7 @@
 .signup-form {
   width: 100%;
   max-width: 330px;
-  padding: 15px;
+  padding: 20px;
   margin: auto;
   margin-top: 80px;
   height: 100%;
@@ -10,7 +10,16 @@
     rgb(125, 125, 125);
   border-radius: 10px;
   border: inset;
-  color: black;
+    color: white;
+    border: inset;
+    text-shadow: 3px 3px black
+}
 
+Button {
+  background: #850707 !important;
+}
 
+.sign-up {
+  text-shadow: 0 0  !important;
+  color: darkblue;
 }
