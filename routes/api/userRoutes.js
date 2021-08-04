@@ -2,6 +2,8 @@ const router = require("express").Router();
 const movieController = require("../../controllers/movieController");
 const passport = require("passport")
 const User = require('../../models/user')
+const bcrypt = require('bcrypt');
+const mongoose = require('mongoose');
 require('../../config/passport')(passport);
 
 router.route("/profile/:username")
@@ -32,6 +34,9 @@ router.post('/signin', function(req, res, next) {
       });
     })(req, res, next);
   });
+
+
+//check if logged in
 router.get('/check', function(req, res) {
   console.log(req.user)
   if(req.user) {
@@ -42,21 +47,11 @@ router.get('/check', function(req, res) {
   }
 })
 
-
 //Logout Route
-router.get('/', (req, res) => {
-    // Express middleware function for logging out a user. The action is successful
-// if the user is no longer authenticated.
-var logout = function (req, res, next) {
-  // Get rid of the session token. Then call `logout`; it does no harm.
-  req.logout();
+router.get('/logout', function (req, res){
   req.session.destroy(function (err) {
-    if (err) { return next(err); }
-    // The response should indicate that the user is no longer authenticated.
-    return res.send({ authenticated: req.isAuthenticated() });
+    res.redirect('/'); //Inside a callback… bulletproof!
   });
-};
-    
-})
+});
 
 module.exports = router

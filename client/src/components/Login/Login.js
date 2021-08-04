@@ -1,13 +1,9 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import { Button, Form, FormGroup, Label, Input } from "reactstrap";
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
+  BrowserRouter as 
   Link,
-  Redirect,
-  useHistory,
-  useLocation
+  useHistory
 } from "react-router-dom";
 import './login.css'
 import API from '../../utils/API';
@@ -27,10 +23,7 @@ const Login = (props) => {
       password: password
     })
     .then(res => {
-      console.log(res, props.auth)
-      // props.auth.signin(() => {
-      //   history.push("/home");
-      // })
+      console.log(res)
       window.location.replace("/home")
     })
     .then(alert(`Hello ${username}`))
