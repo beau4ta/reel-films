@@ -1,13 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Button, Form, FormGroup, Label, Input } from "reactstrap";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  Redirect,
+  useHistory,
+  useLocation
+} from "react-router-dom";
 import './login.css'
 import API from '../../utils/API';
-import { Link } from 'react-router-dom';
+
+
 
 const Login = (props) => {
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  
+  let history = useHistory();
 
   const handleLogin = event => {
     API.signIn({
@@ -15,9 +27,13 @@ const Login = (props) => {
       password: password
     })
     .then(res => {
-      console.log(res)
+      console.log(res, props.auth)
+      // props.auth.signin(() => {
+      //   history.push("/home");
+      // })
       window.location.replace("/home")
     })
+    .then(alert(`Hello ${username}`))
     .catch(err => console.log(err))
   }
 
