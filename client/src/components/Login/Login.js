@@ -54,7 +54,7 @@ const Login = (props) => {
       className="btn-lg btn-block btn-dark"
       onClick={handleLogin}
       >Login</Button>
-      <Link to='/signup' className='sign-up'>Don't have an account? Sign up.</Link>
+      <a href='/signup' className='sign-up'>Don't have an account? Sign up.</a>
       </div>
         </Form>
         </div>
