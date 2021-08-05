@@ -26,7 +26,7 @@ const Login = (props) => {
       console.log(res)
       window.location.replace("/home")
     })
-    .then(alert(`Hello ${username}`))
+    .then(res => res.send(`Hello ${username}`))
     .catch(err => console.log(err))
   }
 

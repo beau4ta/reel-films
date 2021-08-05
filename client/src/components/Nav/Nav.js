@@ -6,6 +6,7 @@ import API from '../../utils/API';
 
 const Navbar = (props) => {
   const [loggedIn, setLoggedIn] = useState(false);
+  const [logOut, setLogOut] = useState()
 
   useEffect(() => {
     API.checkLoggedIn()
@@ -16,6 +17,7 @@ const Navbar = (props) => {
     }
   })
   })
+
 
   return (
     <div className="nav">
@@ -28,7 +30,7 @@ const Navbar = (props) => {
         </NavItem>
         
         <NavItem>
-          <Link to='/' className='nav-link'>Log Out</Link>
+          <Link to='/logout' className='nav-link'>Log Out</Link>
         </NavItem>
       </Nav>) : (
         <Nav tabs>

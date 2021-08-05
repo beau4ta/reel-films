@@ -18,6 +18,8 @@ const AllResults = (props) => {
                 genre={props.genre}
                 plot={props.plot}
                 poster={props.poster}
+                rated={props.rated}
+                runtime={props.runtime}
                 _id={props._id}
                 deleteMovie={deleteMovie}
               />
@@ -39,6 +41,8 @@ const AllResults = (props) => {
                 genre={movie.Genre}
                 plot={movie.Plot}
                 poster={movie.Poster}
+                rated={movie.Rated}
+                runtime={movie.Runtime}
                 _id={props._id}
                 saveMovie={saveMovie}
               />

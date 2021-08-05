@@ -29,6 +29,8 @@ const SavedResult = props => {
                              year={moment(movie.year).format('YYYY')}
                              poster={movie.poster}
                              genre={movie.genre}
+                             rated={movie.rated}
+                             runtime={movie.runtime}
                              _id={movie._id}
                              deleteMovie={deleteMovie}
                              />
