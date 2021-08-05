@@ -17,6 +17,13 @@ const Navbar = (props) => {
   })
   })
 
+  const setLogOut = () => {
+    API.logOut()
+    .then(window.location.reload())
+    .then(window.location.replace('/'))
+  }
+
+
   return (
     <div className="nav">
       {loggedIn ? (<Nav tabs>
@@ -28,7 +35,7 @@ const Navbar = (props) => {
         </NavItem>
         
         <NavItem>
-          <Link to='/' className='nav-link'>Log Out</Link>
+          <Link onClick={() =>  setLogOut()} to='#' className='nav-link'>Log Out</Link>
         </NavItem>
       </Nav>) : (
         <Nav tabs>

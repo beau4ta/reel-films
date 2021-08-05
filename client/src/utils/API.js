@@ -36,6 +36,10 @@ saveMovie: function (savedMovies) {
 
   checkLoggedIn: function () {
     return axios.get('/api/user/check');
+  },
+
+  logOut: function () {
+    return axios.post('/api/user/logout');
   }
 };
 

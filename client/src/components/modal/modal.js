@@ -80,6 +80,10 @@ export const Modal = ({searchMovie, showModal, setShowModal}) => {
               <br/>
               <img src={movies.Poster}/>
               <br/>
+              {movies.Rated}
+              <br/>
+              {movies.Runtime}
+              <br/>
               Plot: {movies.Plot}
             </ModalContent>
             <CloseModalButton

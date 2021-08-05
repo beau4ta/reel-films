@@ -6,6 +6,7 @@ const bcrypt = require('bcrypt');
 const mongoose = require('mongoose');
 require('../../config/passport')(passport);
 
+
 router.route("/profile/:username")
     .get(movieController.findByUsername)
 
@@ -48,10 +49,10 @@ router.get('/check', function(req, res) {
 })
 
 //Logout Route
-router.get('/logout', function (req, res){
-  req.session.destroy(function (err) {
-    res.redirect('/'); //Inside a callback… bulletproof!
-  });
+router.post('/logout', function (req, res){
+  console.log('logged out');
+  req.logout();
+  res.redirect('/')
 });
 
 module.exports = router
