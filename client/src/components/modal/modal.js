@@ -5,17 +5,19 @@ import API from '../../utils/API';
 
 
 const ModalWrapper = styled.div`
-  width: 500px;
+  width: 800px;
   height: 800px;
   background: #850707;
   color: #000;
   display: flex;
-  position: absolute;
-  z-index: 10;
+  position: fixed;
+  top: 40px;
+  left: calc(50% - 400px);
+  bottom: 40px;
+  z-index: 100;
   border-radius: 10px;
   border: inset;
   opacity: 90%;
-  margin-left: 50px;
 `;
 
 const ModalContent = styled.div`
@@ -24,7 +26,8 @@ const ModalContent = styled.div`
   justify-content: center;
   align-items: center;
   line-height: 1.8;
-  color: #141414;
+  color: white;
+  text-shadow: none;
   p {
     margin-bottom: 1rem;
   }
