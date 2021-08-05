@@ -50,6 +50,7 @@ router.get('/check', function(req, res) {
 
 //Logout Route
 router.post('/logout', function (req, res){
+  console.log('logged out');
   req.logout();
   res.redirect('/')
 });
