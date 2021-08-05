@@ -67,8 +67,6 @@ const SearchResults = (props) => {
                         <h4>{props.director}</h4>
                         <h4>{props.plot}</h4>
                         <h4>{props.genre}</h4>
-                        <h4>{props.rated}</h4>
-                        <h4>{props.runtime}</h4>
                         <div className='button-container'>
                             <Button className='saveBtn' onClick={() => saveMovie(props)}><i className="fas fa-plus"></i></Button>
                         </div>

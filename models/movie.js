@@ -7,9 +7,7 @@ const movieSchema = new Schema({
     genre: { type: String },
     plot: { type: String },
     year: { type: Date, default: Date.now },
-    poster: { type: String, required: true },
-    rated: { type: String, required: true },
-    runtime: { type: String, required: true }
+    poster: { type: String, required: true }
 });
 
 const Movie = mongoose.model('Movie', movieSchema);
