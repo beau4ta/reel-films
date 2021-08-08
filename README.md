@@ -45,5 +45,6 @@
     mknauss97@gmail.com
     aaron.k.keller@gmail.com
 
+Link to the deployed app: https://frozen-ravine-79137.herokuapp.com/
 
-  
+<img src ='assets/reelss1.png'>
